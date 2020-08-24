@@ -1,9 +1,9 @@
 {
-  "name": "saleor-site",
+  "name": "noor-frontend",
   "version": "2.11.0-a.0",
   "private": true,
-  "author": "Mirumee",
-  "homepage": "https://getsaleor.com/",
+  "author": "Noor",
+  "homepage": "https://noor.io/",
   "main": "dist/index.js",
   "browserslist": "last 2 versions",
   "dependencies": {
@@ -204,7 +204,7 @@
     "codegen": "apollo codegen:generate --target=typescript gqlTypes",
     "codegen-sdk": "apollo codegen:generate --target=typescript gqlTypes --config src/@sdk/apollo.config.js --globalTypesFile src/@sdk/gqlTypes/globalTypes.ts",
     "codegen-watch": "npm run codegen -- --watch",
-    "lint": "npx eslint \"src/**/*.@(tsx|ts|jsx|js)\" --fix ; npx prettier --check \"src/**/*.@(tsx|ts|jsx|js)\" --write",
+    "lint": "npx eslint \"src/**/*.{tsx,ts,jsx,js}\" --fix & npx prettier --check --write \"src/**/*.{tsx,ts,jsx,js}\"",
     "tsc": "npx tsc --noEmit & npx tsc --noEmit -p src/@next",
     "heroku-postbuild": "npm run build",
     "sitemap": "ts-node ./src/sitemap-builder.ts",
