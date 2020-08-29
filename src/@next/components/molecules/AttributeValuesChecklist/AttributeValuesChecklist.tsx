@@ -15,7 +15,6 @@ export const AttributeValuesChecklist: React.FC<IProps> = ({
   onValueClick,
 }: IProps) => {
   const [viewAllOptions, setViewAllOptions] = React.useState(!valuesShowLimit);
-
   return (
     <S.Wrapper>
       {title && <S.Header>{title}</S.Header>}
@@ -26,6 +25,7 @@ export const AttributeValuesChecklist: React.FC<IProps> = ({
           }
           return (
             <Checkbox
+              key={value?.name || `${name}${index}`}
               name={name}
               checked={!!value.selected}
               onChange={() => onValueClick(value)}
